@@ -12,9 +12,10 @@
 		BA0A06801FBC10D300485B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A067E1FBC10D300485B9B /* Main.storyboard */; };
 		BA0A06821FBC10D300485B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0A06811FBC10D300485B9B /* Assets.xcassets */; };
 		BA0A06851FBC10D300485B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A06831FBC10D300485B9B /* LaunchScreen.storyboard */; };
-		BA0A06901FBC10D300485B9B /* ThrottlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A068F1FBC10D300485B9B /* ThrottlerTests.swift */; };
-		BA0A069D1FBC10F900485B9B /* OldThrottle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A069C1FBC10F900485B9B /* OldThrottle.swift */; };
+		BAC62F231FBD2BCE003A37D9 /* ThrottleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC62F221FBD2BCE003A37D9 /* ThrottleTests.swift */; };
 		BAED3DDF1FBC34D50075D758 /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAED3DDE1FBC34D50075D758 /* Throttle.swift */; };
+		BAF2DE761FBC5067001A82BD /* DispatchThrottle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF2DE751FBC5067001A82BD /* DispatchThrottle.swift */; };
+		BAF2DE781FBC52F0001A82BD /* DispatchThrottleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF2DE771FBC52F0001A82BD /* DispatchThrottleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +37,11 @@
 		BA0A06841FBC10D300485B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA0A06861FBC10D300485B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA0A068B1FBC10D300485B9B /* ThrottlerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThrottlerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA0A068F1FBC10D300485B9B /* ThrottlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrottlerTests.swift; sourceTree = "<group>"; };
 		BA0A06911FBC10D300485B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA0A069C1FBC10F900485B9B /* OldThrottle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OldThrottle.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BAC62F221FBD2BCE003A37D9 /* ThrottleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThrottleTests.swift; sourceTree = "<group>"; };
 		BAED3DDE1FBC34D50075D758 /* Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Throttle.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BAF2DE751FBC5067001A82BD /* DispatchThrottle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchThrottle.swift; sourceTree = "<group>"; };
+		BAF2DE771FBC52F0001A82BD /* DispatchThrottleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchThrottleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				BAED3DDE1FBC34D50075D758 /* Throttle.swift */,
-				BA0A069C1FBC10F900485B9B /* OldThrottle.swift */,
+				BAF2DE751FBC5067001A82BD /* DispatchThrottle.swift */,
 				BA0A067A1FBC10D300485B9B /* AppDelegate.swift */,
 				BA0A067C1FBC10D300485B9B /* ViewController.swift */,
 				BA0A067E1FBC10D300485B9B /* Main.storyboard */,
@@ -96,8 +98,9 @@
 		BA0A068E1FBC10D300485B9B /* ThrottlerTests */ = {
 			isa = PBXGroup;
 			children = (
-				BA0A068F1FBC10D300485B9B /* ThrottlerTests.swift */,
 				BA0A06911FBC10D300485B9B /* Info.plist */,
+				BAF2DE771FBC52F0001A82BD /* DispatchThrottleTests.swift */,
+				BAC62F221FBD2BCE003A37D9 /* ThrottleTests.swift */,
 			);
 			path = ThrottlerTests;
 			sourceTree = "<group>";
@@ -206,8 +209,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA0A067D1FBC10D300485B9B /* ViewController.swift in Sources */,
+				BAF2DE761FBC5067001A82BD /* DispatchThrottle.swift in Sources */,
 				BA0A067B1FBC10D300485B9B /* AppDelegate.swift in Sources */,
-				BA0A069D1FBC10F900485B9B /* OldThrottle.swift in Sources */,
 				BAED3DDF1FBC34D50075D758 /* Throttle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA0A06901FBC10D300485B9B /* ThrottlerTests.swift in Sources */,
+				BAF2DE781FBC52F0001A82BD /* DispatchThrottleTests.swift in Sources */,
+				BAC62F231FBD2BCE003A37D9 /* ThrottleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

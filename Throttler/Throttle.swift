@@ -7,29 +7,28 @@
 //
 
 import Foundation
+import QuartzCore
 
-class Throttle {
+@objc
+final class Throttle: NSObject {
     
     private let interval: NSTimeInterval
-    
-    var isTimeElapsed = false
-    var lastExecuted = DISPATCH_TIME_NOW
+    private var isInitial = true
+    private var lastExecuted = CACurrentMediaTime()
     
     init(interval: NSTimeInterval) {
         self.interval = interval
     }
     
-    func throttle(block: () -> ()) {
-        let now = DISPATCH_TIME_NOW
-        if now - lastExecuted < dispatch_time_t(interval) {
-            return;
+    func throttle(block: () -> Void) {
+        let now = CACurrentMediaTime()
+        let delta = now - lastExecuted
+        if delta > interval || isInitial {
+            lastExecuted = now
+            isInitial = false
+            
+            // Execute
+            block()
         }
-        
-        self.lastExecuted = DISPATCH_TIME_NOW
-        self.isTimeElapsed = true
-        
-        // Execute
-        block()
     }
 }
-
