@@ -75,5 +75,4 @@ class ThrottleTests: XCTestCase {
         XCTAssertEqual(log.count, expected.count, "Throttle log should equal 3")
         XCTAssertEqual(log, expected, "Throttle log should contain 0th, 5th, 9th actions")
     }
-
 }
